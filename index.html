@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timestamp</title>
-</head>
-<body>
-    <h1>
-
-    </h1>
-</body>
-<script>
-    const timestamp = document.querySelector("h1");
-    timestamp.innerText = Math.floor( Date.now() / 1000 );
-</script>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $( document ).ready(function() {
+            document.write( Math.floor( Date.now() / 1000 ) );
+        });
+        </script>
+    </head>
 </html>
