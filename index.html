@@ -1,11 +1,25 @@
-<html>
-    <body>
-        <form action="#" method="post">
-            <div class="show"></div>
-        </form>
-    </body>
-    <script>
-        const timestamp = document.querySelector(".show");	
-        timestamp.innerText = Math.floor( Date.now() / 1000 );
-    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div-1">foo</div>
+    <div id="div-2">bar</div>
+</body>
+<script>
+    var el = document.getElementById("div-2"),
+    html = "<span>Some HTML <b>here</b></span>";
+
+// Internet Explorer, Opera, Google Chrome and Safari
+if (el.insertAdjacentHTML)
+    el.insertAdjacentHTML ("beforeBegin", html);
+else {
+    var range = document.createRange();
+    var frag = range.createContextualFragment(html);
+    el.parentNode.insertBefore(frag, el);
+}
+</script>
 </html>
