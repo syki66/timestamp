@@ -1,25 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="div-1">foo</div>
-    <div id="div-2">bar</div>
-</body>
-<script>
-    var el = document.getElementById("div-2"),
-    html = "<span>Some HTML <b>here</b></span>";
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
 
-// Internet Explorer, Opera, Google Chrome and Safari
-if (el.insertAdjacentHTML)
-    el.insertAdjacentHTML ("beforeBegin", html);
-else {
-    var range = document.createRange();
-    var frag = range.createContextualFragment(html);
-    el.parentNode.insertBefore(frag, el);
-}
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function httpGet(theUrl)
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+            xmlHttp.send( null );
+            return xmlHttp.responseText;
+        }
+
+        console.log(httpGet("http://127.0.0.1:8080/"));
+        </script>
+    </head>
+    <body>
+        <div>
+                
+        </div>
+        <form action="" method="GET" class="form-example">
+
+
+        </form>
+          
+    </body>
+    <script>
+        class ClassWithStaticMethod {
+            static staticMethod() {
+                return 'static method has been called.';
+            }
+        }
+
+        document.write(ClassWithStaticMethod.staticMethod());
+
+
+
+            const timestamp = document.querySelector("div");
+            timestamp.innerHTML = Math.floor( Date.now() / 1000 );
+
+
+    </script>
 </html>
